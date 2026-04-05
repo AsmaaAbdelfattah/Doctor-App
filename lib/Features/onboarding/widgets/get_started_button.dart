@@ -1,4 +1,6 @@
 import 'package:doctor_app/Core/Theming/colors.dart';
+import 'package:doctor_app/Core/helpers/extensions.dart';
+import 'package:doctor_app/Core/routing/routes.dart';
 import 'package:doctor_app/Core/theming/styles.dart';
 import 'package:flutter/material.dart';
 
@@ -8,7 +10,9 @@ class GetStartedButton extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return TextButton(
-      onPressed: () {},
+      onPressed: () {
+         context.pushNamed(Routes.loginScreen);
+      },
       style: ButtonStyle(
         backgroundColor: WidgetStatePropertyAll(ColorsManager.mainBlue),
         tapTargetSize: MaterialTapTargetSize.shrinkWrap,
